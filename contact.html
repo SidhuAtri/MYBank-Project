@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MYBank</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./contact.css">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <nav>
+        <div class="header">
+            <div class="logo">
+                <a href="#">MYBank</a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="netbanking.html">Netbanking</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="wrapper">
+            <!-- COMPANY INFORMATION -->
+            <div class="company-info">
+                <h3>MYBank Pvt. Ltd.</h3>
+                <ul>
+                    <li><i class="fa fa-road"></i> 45 Abc, State, Country</li>
+                    <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+                    <li><i class="fa fa-envelope"></i> mybank_support@email.com</li>
+                </ul>
+            </div>
+            <!-- End .company-info -->
+
+            <!-- CONTACT FORM -->
+            <div class="contact">
+                <h3>Connect with Us!</h3>
+                <br>
+                <form id="contact-form">
+                    <p>
+                        <label>Name</label>
+                        <input type="text" name="name" id="name" required>
+                    </p>
+                    <p>
+                        <label>Query/ Suggestion</label>
+                        <select>
+                            <option value="choose">Choose</option>
+                            <option value="query">query</option>
+                            <option value="suggestion">suggestion</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>E-mail Address</label>
+                        <input type="email" name="email" id="email" required>
+                    </p>
+                    <p>
+                        <label>Phone Number</label>
+                        <input type="text" name="phone" id="phone">
+                    </p>
+                    <p class="full">
+                        <label>Message</label>
+                        <textarea name="message" rows="5" id="message"></textarea>
+                    </p>
+
+                    <p class="full">
+                        <button type="submit">Submit</button>
+                    </p>
+
+                </form>
+                <!-- End #contact-form -->
+            </div>
+            <!-- End .contact -->
+
+        </div>
+        <!-- End .wrapper -->
+    </div>
+    <!-- End .container -->
+
+
+    <footer>
+        <div class="footer">
+            <h4>Copyright © MYBank Pvt. Ltd.</h4>
+        </div>
+    </footer>
+</body>
+
+</html>

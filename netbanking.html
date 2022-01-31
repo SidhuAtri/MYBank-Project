@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MYBank</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./netbanking.css">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <nav>
+        <div class="header">
+            <div class="logo">
+                <a href="#">MYBank</a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#">Netbanking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="netbanking-main">
+
+
+        <div class="container">
+            <div class="margin-top1"></div>
+            <div class="wrapper">
+
+                <!-- COMPANY INFORMATION -->
+                <div class="company-info">
+                    <h3>Already Registered? | <b>Login Here</b></h3>
+                </div>
+                <!-- End .company-info -->
+
+                <!-- CONTACT FORM -->
+
+                <div class="contact">
+
+                    <form id="contact-form" action="user.html" method="POST">
+                        <p class="full">
+                            <label>Username</label>
+                            <input type="text" name="uname" id="runame" required>
+                        </p>
+
+                        <p class="full">
+                            <label>Password</label>
+                            <input type="password" name="password" id="password" required>
+                        </p>
+
+                        <p>
+                            <button type="submit" value="submit">Login</button>
+                        </p>
+                        <p>
+                            <label>Forgot password?</label>
+                            <a href="#">Click Here!</a>
+                        </p>
+
+                    </form>
+                    <!-- End #contact-form -->
+                </div>
+                <!-- End .contact -->
+            </div>
+            <!-- End .wrapper -->
+
+        </div>
+        <!-- End .container -->
+
+        <div class="container">
+            <div class="wrapper">
+                <!-- COMPANY INFORMATION -->
+                <div class="company-info1">
+                    <h3>New Registration? | Signup Here</b></h3>
+                </div>
+                <!-- End .company-info -->
+
+                <!-- CONTACT FORM -->
+                <div class="contact">
+                    <form id="contact-form" action="user.html" method="POST">
+                        <p>
+                            <label>Name</label>
+                            <input type="text" name="name" id="name" required>
+                        </p>
+                        <p>
+                            <label>Username</label>
+                            <input type="text" name="uname" id="uname" required>
+
+                        </p>
+                        <p>
+                            <label>E-mail</label>
+                            <input type="email" name="email" id="email" required>
+
+                        </p>
+                        <p>
+                            <label>Account Number</label>
+                            <input type="number" name="anumber" id="anumber" required>
+
+                        </p>
+
+                        <p>
+                            <label>Date of Birth</label>
+                            <input type="date" name="dob" id="dob">
+                        </p>
+                        <p>
+                            <label>Phone Number</label>
+                            <input type="phone" maxlength=10 minlength="10" name="phone" id="phone">
+                        </p>
+                        <p>
+                            <label>Password</label>
+                            <input type="password" name="password" id="password" minlength="6" maxlength="15" required>
+                        </p>
+                        <p>
+                            <label>Confirm Password</label>
+                            <input type="password" name="password" id="password" minlength="6" maxlength="15" required>
+                        </p>
+
+                        <button type="submit">Submit</button>
+                        <button id="reset" type="reset">Clear</button>
+
+
+                    </form>
+                    <!-- End #contact-form -->
+                </div>
+                <!-- End .contact -->
+
+            </div>
+            <!-- End .wrapper -->
+        </div>
+        <!-- End .container -->
+    </div>
+
+    <footer>
+        <div class="footer">
+            <h4>Copyright © MYBank Pvt. Ltd.</h4>
+        </div>
+    </footer>
+</body>
+
+</html>

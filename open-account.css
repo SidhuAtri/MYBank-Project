@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.wrapper {
+    box-shadow: 0 0 20px 0 darkslategray;
+}
+
+.emi-main h2 {
+    color: darkslategray;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.emi-main {
+    background: #dcdfea;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* ---- */
+/* FORM */
+/* ---- */
+.emi-main h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+.emi-main form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.emi-main form label {
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    color: darkslategray;
+}
+
+.emi-main form p {
+    margin: 0;
+}
+
+.emi-main form .full {
+    grid-column: 1 / 3;
+}
+
+.emi-main form button,
+.emi-main form input,
+.emi-main form textarea,
+.emi-main form select {
+    width: 100%;
+    padding: 1em;
+    border: solid 1px #627EDC;
+    border-radius: 4px;
+}
+
+.emi-main form textarea {
+    resize: none;
+}
+
+.emi-main form button {
+    background: darkslategray;
+    border: 0;
+    color: #e4e4e4;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.emi-main form button:hover,
+.emi-main form button:focus {
+    background: #3952a3;
+    color: #ffffff;
+    outline: 0;
+    transition: background-color 2s ease-out;
+}
+
+@media only screen and (min-width: 700px) {
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .wrapper>* {
+        padding: 2em;
+    }
+
+    .contact {
+        border-radius: 0 4px 4px 0;
+    }
+
+    .company-info h3,
+    .company-info ul,
+    .brand {
+        text-align: left;
+    }
+}
+
+#reset {
+    background-color: red;
+}

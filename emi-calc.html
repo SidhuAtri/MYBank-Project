@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MYBank - EMI Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./emi-calc.css">
+
+
+</head>
+
+<body>
+    <nav>
+        <div class="header">
+            <div class="logo">
+                <a href="#">MYBank</a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="netbanking.html">Netbanking</a></li>
+                    <li><a href="#">EMI Calculator</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="emi-main">
+                <h2>EMI Calculator</h2> <br>
+                <form name="emi">
+                    Applicant Name
+                    <input type="text" name="aname">
+
+                    Loan Amount
+                    <input type="number" name="lamount">
+
+                    Loan Type
+                    <select name="ltype" onchange="roiValue(this.value)">
+                        <option>Choose...</option>
+                        <option value=1>Home Loan</option>
+                        <option value="2">Car Loan</option>
+                        <option value="3">Personal Loan</option>
+                    </select>
+
+                    Duration
+                    <input type="number" name="duration">
+
+                    Rate of Interest
+                    <input type="text" name="roi" disabled>
+
+                    EMI
+                    <input type="number" name="mEmi" disabled>
+
+                    <button type="button" onclick="emiCalc()">Calculate</button>
+                    <button id="reset" type="reset">Reset</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <h4>Copyright © MYBank Pvt. Ltd.</h4>
+        </div>
+    </footer>
+
+
+    <script>
+        function roiValue(ltype) {
+            if (ltype == 1) {
+                document.emi.roi.value = "7%";
+                return 7;
+            } else if (ltype == 2) {
+                document.emi.roi.value = "9%";
+                return 9;
+            } else {
+                document.emi.roi.value = "12%";
+                return 12;
+            }
+        }
+
+        function durationCheck(ltype, duration) {
+            if (ltype == 1 && duration > 25) {
+                alert("Duration should be less than 25");
+                return false;
+            }
+            if (ltype == 2 && duration > 7) {
+                alert("Duration should be less than 7");
+                return false;
+            }
+            if (ltype == 3 && duration > 5) {
+                alert("Duration should be less than 5");
+                return false;
+            } 
+            return true;
+        }
+
+        function emiCalc() {
+            var lamount = document.emi.lamount.value;
+            var ltype = document.emi.ltype.value;
+            var duration = document.emi.duration.value;
+            var roi = roiValue(ltype);
+
+            if (durationCheck(ltype, duration)) {
+                var interest = ((lamount * roi) / 100) / 12;
+                var emi = interest + (lamount / (duration * 12));
+                document.emi.mEmi.value = emi.toFixed(2);
+            }
+        }
+    </script>
+</body>
+
+</html>

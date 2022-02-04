@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./open-account.css">
+
 </head>
 
 <body>
@@ -35,70 +36,48 @@
             <div class="emi-main">
                 <h2>Open New Account</h2> <br>
                 <form name="cust" action="">
-                    Customer Name : <input name="cname" type="text">
-                    Customer Age : <input name="cage" type="number">
+                    Customer Name : <input name="cname" id="name" type="text">
+                    Customer Age : <input name="cage" id="age" type="number">
                     Account type :
-                    <select name="atype">
+                    <select name="atype" id="type">
                         <Option>Saving</Option>
                         <Option>Current</Option>
                     </select>
-                    Branch Name : <input name="bname" type="text">
-                    Mobile No. : <input name="mobile" type="number">
+                    Branch Name : <input name="brname" id="bname" type="text">
+                    Mobile No. : <input name="mobileNo" id="mobile" type="number">
 
                     <button type="button" onclick="onApply()">Apply</button>
                     <button type="reset">Reset</button>
                     <button type="button" onclick=" onDisplayNames()">Display Names</button>
-                    <button type="button" onclick=" onDisplayAll()">Display All</button>
+                    <button type="button" id="display" onclick="onDisplayAll()">Display All</button>
+                    <button class="full" type="button" id="remove" onclick="removeHide()"></button>
+
                 </form>
+                <div id="rem" class="hide">
+                    <strong>Enter Row No.</strong>
+                    <input class="input-remove" type="text" id="removeID">
+                    <button class="button-light" type="button" onClick="removeData()">Remove</button>
+                </div>
+                <div id="opr">
+                    <strong>Recent Operation &nbsp;</strong>
+                    <span id="dot"></span>
+                </div>
             </div>
+
         </div>
+        <table class="table border" id="displayName"></table>
+        <table class="table border" id="table"></table>
     </div>
 
-    <footer>
+
+
+    <!-- <footer>
         <div class="footer">
             <h4>Copyright © MYBank Pvt. Ltd.</h4>
         </div>
-    </footer>
+    </footer> -->
 
-    <script>
-        var arr = [];
-
-        function onApply() {
-            var cname = document.cust.cname.value;
-            var cage = document.cust.cage.value;
-            var atype = document.cust.atype.value;
-            var bname = document.cust.bname.value;
-            var mobile = document.cust.mobile.value;
-
-            var cust = {
-                "name": cname,
-                "age": cage,
-                "atype": atype,
-                "bname": bname,
-                "mobile": mobile,
-            }
-            arr.push(cust);
-            alert("Successfully Applied!")
-        }
-
-        function onDisplayNames() {
-            for (let i = 0; i < arr.length; i++) {
-                document.write("<br>" + arr[i]["name"] + " " + arr[i]["atype"]);
-            }
-        }
-
-        function onDisplayAll() {
-            for (let i = 0; i < arr.length; i++) {
-                document.write("<br> Customer No. : " + (i + 1));
-                document.write("<br> Name : " + arr[i]["name"]);
-                document.write("<br> Age : " + arr[i]["cage"]);
-                document.write("<br> Account type : " + arr[i]["atype"]);
-                document.write("<br> Branch Name : " + arr[i]["bname"]);
-                document.write("<br> Mobile : " + arr[i]["mobile"]);
-                document.write("<br> **************************");
-            }
-        }
-    </script>
+    <script src="./open-account.js"></script>
 </body>
 
 </html>
